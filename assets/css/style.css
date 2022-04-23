@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500&family=Roboto:wght@300;400&family=Space+Mono&display=swap');
+
+
+html * {
+  font-family: Roboto;
+  padding: 0;
+  margin: 0;
+  
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Pour tout les boutons du site */
+input[type="submit"] {
+  background-color: #3498db !important;
+  border-radius: 20px;
+  font-size: 17px;
+  padding: 6px 18px;
+  border: 0px;
+  cursor: pointer;
+}
+
+
+
+html, body, #map {
+    height: 100%;
+    width: 100vw;
+}
+
+
+.formbox {
+    padding: 24px;
+    border: 0.8px;
+}
+
+/* style de la page map */
+.sidenav {
+    position: relative;
+    width: 250px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+.search {
+  position: relative;
+  width: 500px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: 0.5s;
+  }
+
+  .test {
+    height: 93%;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+
+  }
+
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 19px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    
+  }
+  .sidenav a ul li {
+    list-style-type: none;
+  }
+
+
+  /* Style des formulaires */
+
+  body.loginBody{
+    background-image: url(https://freellustrustrations.s3.us-east-2.amazonaws.com/free-images/thumbimg_75049575046thumbejpg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loginForm, .signinForm {
+    display: flex;
+    border-radius: 10px;
+    width: 400px;
+    flex-wrap: wrap;
+    background-color: #2d3436ce;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.45);
+    color: floralwhite;
+    
+  }
+
+  .loginFields {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+  }
+
+  .loginButtons {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+    text-decoration: none;
+  }
+
+
+
+
+  .loginFields .labelInput {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .labelInput input {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+/* barre de navigation d'en-tête */
+
+nav {
+  padding: 0px;
+  height: 7%;
+  display:flexbox;
+  flex-wrap: wrap;
+  align-self: center;
+  
+}
+.navbar {
+  display: flex;
+  /* retire les points des li */
+  list-style: none; 
+  background-color:#192a56;
+  height: 100%;
+  padding-left: 3%;
+
+}
+
+.navbar li {
+  margin-right: 20px;
+  align-self: center;
+}
+
+.navbar li a {
+  
+  /* color: floralwhite !important; */
+}
+a {
+  color: floralwhite;
+  text-decoration: none;
+}
+
+/* Icones */
+
+.voitureIcon {
+  color: whitesmoke;
+  background-color: white;
+  border :2px solid black;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.voitureIconSelected {
+  color: whitesmoke;
+  background-color: red;
+  border :2px solid black;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+#map{
+  z-index: 1;
+}
+
+
+.search-bar{
+
+  position: absolute;
+  left: 50px;
+  top: 20px;
+  height: 40px;
+  width: 150px;
+  z-index: 10 !important;
+}
+.form-control{
+  line-height: 30px;
+  border:1px solid red;
+  border-radius: 5px;
+}
+

@@ -1,0 +1,57 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+            "name" : "Les Barthes"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            1.1664605140686033,
+            44.103373082131775
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "name" : "Moissac"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            1.0833549499511719,
+            44.10533762552548
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "name" : "Castelsarrasin"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            1.1075592041015625,
+            44.03947831376241
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "name" : "Montauban"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            1.3540649414062498,
+            44.01775581573425
+          ]
+        }
+      }
+    ]
+  }
