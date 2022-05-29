@@ -9,6 +9,7 @@ class Api extends CI_Controller
         parent::__construct();
         $this->load->helper('url');
         $this->load->library('session');
+        
     }
 
 
@@ -34,31 +35,40 @@ class Api extends CI_Controller
 
     public function getChargingStations()
     {
+        $this->load->model('Charging_Station_Model');
+        $result = $this->Charging_Station_Model->get_chargingStations();
+
         header('Content-Type: application/json'); // Specify the type of data
-        echo $this->CsvToJson('chargingStations.csv');
+        // echo $this->CsvToJson('chargingStations.csv');
+
+        echo json_encode($result);
     }
 
     public function getDevices()
     {
-        $url = "https://pro.viafleet.io/api/geo/devices";
-
-        header('Content-Type: application/json'); // Specify the type of data
-        $ch = curl_init(); // Initialise cUR
-        curl_setopt($ch, CURLOPT_URL, $url);
-        /// AUTH
-        $authorization = "Authorization: Basic YWRtaW4tdGVwaWY6OGdoMzRzWUU=";
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'Content-Type: application/json',
-            $authorization,
-        )); 
         
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1); // This will follow any redirects
-        $result = curl_exec($ch); // Execute the cURL statement
-        curl_close($ch); // Close 
-        echo $result;die();
+        //local pour l'E5
+        header('Content-Type: application/json'); // Specify the type of data
+        $str = file_get_contents(getcwd() . '/assets/json/devices.json');
+        echo $str;
+
+        // $url = "https://pro.viafleet.io/api/geo/devices";
+        // $ch = curl_init(); // Initialise cUR
+        // curl_setopt($ch, CURLOPT_URL, $url);
+        // /// AUTH
+        // $authorization = "Authorization: Basic YWRtaW4tdGVwaWY6OGdoMzRzWUU=";
+        // curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        //     'Content-Type: application/json',
+        //     $authorization,
+        // )); 
+        
+        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        // curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        // curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1); // This will follow any redirects
+        // $result = curl_exec($ch); // Execute the cURL statement
+        // curl_close($ch); // Close 
+        // echo $result;die();
 
     }
 }

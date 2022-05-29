@@ -55,7 +55,7 @@ function directionApiTest(firstPoint,secondPoint){
 }
 function loadDevices() {
     var settings = {
-        "url": "http://viasat-connect.test/index.php/api/getDevices",
+        "url": "http://viasat.app.lan/index.php/api/getDevices",
         "method": "GET",
         "timeout": 0,
         async: true,
@@ -106,7 +106,7 @@ function loadDevices() {
 function loadChargingStations() {
 
     var settings = {
-        "url": "http://viasat-connect.test/index.php/api/getChargingStations",
+        "url": "http://viasat.app.lan/index.php/api/getChargingStations",
         "method": "GET",
         "timeout": 0,
         async: false,
@@ -368,7 +368,7 @@ var intineraire = null;
 
 //Création de l'icone qu'on ajoutera à toutes les features du layer
 var carIcon = L.icon({
-    iconUrl: 'http://viasat-connect.test/assets/img/car_icon.png',
+    iconUrl: 'http://viasat.app.lan/assets/img/car_icon.png',
 
     iconSize: [25, 25], // size of the icon
     iconAnchor: [20, 27], // point of the icon which will correspond to marker's location
@@ -377,7 +377,7 @@ var carIcon = L.icon({
 });
 
 var redCarIcon = L.icon({
-    iconUrl: 'http://viasat-connect.test/assets/img/car_icon.png',
+    iconUrl: 'http://viasat.app.lan/assets/img/car_icon.png',
 
     iconSize: [25, 25], // size of the icon
     iconAnchor: [20, 27], // point of the icon which will correspond to marker's location
@@ -386,7 +386,7 @@ var redCarIcon = L.icon({
 })
 
 var chargingStationIcon = L.icon({
-    iconUrl: 'http://viasat-connect.test/assets/img/charginStation.png',
+    iconUrl: 'http://viasat.app.lan/assets/img/charginStation.png',
     iconSize: [25, 25], // size of the icon
     iconAnchor: [20, 27], // point of the icon which will correspond to marker's location
     popupAnchor: [0, -28], // point from which the popup should open relative to the iconAnchor
